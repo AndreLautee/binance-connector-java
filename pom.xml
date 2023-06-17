@@ -93,6 +93,7 @@
                     <excludePackageNames>
                         com.binance.connector.client.enums:com.binance.connector.client.exceptions:com.binance.connector.client.utils
                     </excludePackageNames>
+                    <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
                 </configuration>
                 <executions>
                     <execution>
@@ -115,6 +116,7 @@
                             <goal>sign</goal>
                         </goals>
                         <configuration>
+                            <skip>true</skip>
                             <!-- Prevent gpg from using pinentry programs -->
                             <gpgArguments>
                                 <arg>--pinentry-mode</arg>
@@ -195,5 +197,6 @@
             <artifactId>bcprov-jdk18on</artifactId>
             <version>1.73</version>
         </dependency>
+
     </dependencies> 
 </project>
